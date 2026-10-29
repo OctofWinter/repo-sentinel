@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-sentinel"
+version = "0.1.0"
+description = "Offline release-readiness checks for source repositories, with redacted secret findings."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "OctofWinter"}]
+keywords = ["repository", "release", "audit", "security", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+repo-sentinel = "repo_sentinel.cli:main"
+
+[project.urls]
+Repository = "https://github.com/OctofWinter/repo-sentinel"
+Issues = "https://github.com/OctofWinter/repo-sentinel/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
